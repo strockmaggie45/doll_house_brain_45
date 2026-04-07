@@ -378,42 +378,6 @@ while True:
         ] + ["Welcome back, stranger"]
 
         print(random.choice(welcome_replies))
-import os
 
-import time
-
-
-
-commands_file = 'commands.txt'
-
-
-
-def check_commands():
-
-    if os.path.exists(commands_file):
-
-        with open(commands_file, 'r') as file:
-
-            commands = file.read().strip()
-
-            if commands:
-
-                print(f"Received commands: {commands}")
-
-                # Here you can add the logic for how your robot should act on the commands
-
-                # For now, we'll just clear the file after reading it
-
-                with open(commands_file, 'w') as file:
-
-                    file.write('')
-
-
-
-while True:
-
-    check_commands()
-
-    time.sleep(10)  # Check every 10 seconds
 
     
